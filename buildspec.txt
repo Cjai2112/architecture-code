@@ -1,0 +1,4 @@
+Printed 10 of 29 records returned
+Consumed Capacity: 220.5
+Duration: 273 miliseconds
+

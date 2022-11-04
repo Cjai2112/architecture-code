@@ -1,0 +1,32 @@
+sudo mount -t efs -o tls fs-090b1b58410d3e1d3:/ data
+
+
+sudo yum install -y amazon-efs-utils
+
+mkdir data
+
+sudo mount -t efs -o tls fs-090b1b58410d3e1d3:/ data
+
+cat efs-1-setup.log
+
+sudo bash -c "cat >> efs-1-setup.log"
+
+efs-1 mounted in site C
+
+cat efs-1-setup.log
+
+
+
+#uploads to s3
+  if object_name is None:
+        object_name = (file_name)
+
+    # Upload the file
+    s3_client = boto3.client('s3')
+    try:
+        response = s3_client.upload_file(file_name, bucket, object_name)
+    except ClientError as e:
+        logging.error(e)
+        return False
+    return True
+    

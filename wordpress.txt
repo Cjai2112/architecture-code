@@ -1,0 +1,17 @@
+wget https://s3-us-west-2.amazonaws.com/us-west-2-aws-training/courses/spl-82/v1.4.5.prod-2bbeba30/scripts/WordPress-master.zip
+
+unzip WordPress-master.zip -d /tmp/WordPress_Temp
+
+#wordpress
+mkdir -p /tmp/WordPress
+# put it in a file 
+s3://codedeploybucket596271
+
+
+aws deploy push --application-name WordPress_App --description "This is a revision for the application WordPress_App" --ignore-hidden-files --s3-location s3://codedeploybucket596271/WordPressApp.zip --source .
+
+
+
+#
+847853027581.dkr.ecr.us-west-2.amazonaws.com/myrepo
+
